@@ -1,51 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Prosto+One&family=Roboto+Condensed:wght@300&display=swap');
 
 @font-face {
-    font-family: 'EditorialNew-Italic';
-    src: url(../tipografias/PPEditorialNew-Italic.otf) format('opentype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'EditorialNew-Regular';
-    src: url(../tipografias/PPEditorialNew-Regular.otf) format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'EditorialNew-Ultrabold';
-    src: url(../tipografias/PPEditorialNew-Ultrabold.otf) format('opentype');
-    font-weight: bolder;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'EditorialNew-UltraboldItalic';
-    src: url(../tipografias/PPEditorialNew-UltraboldItalic.otf) format('opentype');
-    font-weight: bolder;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'EditorialNew-UltraLightItalic';
-    src: url(../tipografias/PPEditorialNew-UltralightItalic.otf) format('opentype');
-    font-weight: lighter;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'EditorialNew-UltraLight';
-    src: url(../tipografias/PPEditorialNew-Ultralight.otf) format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Sloop1';
-    src: url(../tipografias/Sloop.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Sloop2';
-    src: url(../tipografias/sloopscript2.ttf) format('truetype');
+    font-family: 'Lucida';
+    src: url(../tipografias/lucon.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -53,20 +10,20 @@
 :root {
     --colorFondo: black;
     --colorClaro: white;
-    --tipoTitulos: 'EditorialNew-UltraLightItalic';
-    --tipoGeneral: 'EditorialNew-UltraLight';
-    --tipoFancy1: 'Sloop1';
-    --tipoFancy2: 'Sloop2';
+    --colorPrim: #00a7fb6b;
+    --colorSec: #006494 ;
+    --tipoTitulos: 'Lucida';
+    --tipoGeneral: 'Lucida';
   
 }
 
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--tipoGeneral);
+    font-family: var(--tipoTitulos);
     scroll-behavior: smooth;
-    background-color: var(--colorFondo) !important;
-    color: white;
+    background-color: transparent !important;
+    color: var(--colorSec);
 }
 
 header {
@@ -89,15 +46,15 @@ header {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 80vw;
+    width: 55vw;
     z-index: 20;
-    box-shadow: rgba(255, 255, 255, 0.35) 10px 15px 15px;
-    padding: 6em;
-    border-width: 1px;
+    padding: 3em;
+    border-width: 3px;
     border-style: solid;
-    border-color: white;
+    border-color: var(--colorSec);
     border-image: initial;
-    border-radius: 80%;
+    border-radius: 0%;
+    background-color: var(--colorClaro) !important;
 }
 #popUp > div {
     display: flex;
@@ -106,18 +63,19 @@ header {
     margin: 2em;
 }
 #popUp > div > h2 {
-    color: white;
+    color: var(--colorSec);
     font-family: var(--tipoGeneral);
     font-size: 3em;
     text-align: center;
 }
 #popUp > div > a {
     position: absolute;
-    top: 50%;
+    top: 43%;
     right: 5%;
     font-family: var(--tipoGeneral);
-    color: rgb(255, 255, 255);
+    color: var(--colorSec) !important;
     cursor: pointer;
+    font-size: 2em;
 }
 #popUp > div > form > div {
     height: 4em;
@@ -125,16 +83,16 @@ header {
 #popUp > div > form > div > input {
     width: 19em;
     height: 2em;
-    color: rgba(255, 255, 255, 0.816);
+    color:var(--colorSec);
     border-radius: 2em;
     padding: 0.2em 0.2em 0.2em 0.5em;
     border-width: 1px;
     border-style: solid;
-    border-color: white;
+    border-color: var(--colorSec);
     border-image: initial;
 }
 #popUp > div > form > input {
-    color: white;
+    color: var(--colorSec);
     position: relative;
     left: 50%;
     top: 50%;
@@ -144,7 +102,7 @@ header {
     padding: 0.5em;
     border-width: 1px;
     border-style: solid;
-    border-color: white;
+    border-color: var(--colorSec);
     border-image: initial;
 }
 #sendButton:hover{
@@ -154,7 +112,7 @@ box-shadow: inset 2px 2px 14px 2px rgba(255,255,255,0.7);
 }
 
 #envio>div{
-    background-color: #fff !important;
+    background-color: var(--colorSec)!important;
     display: flex;
     flex-direction: row-reverse;
     width: 100vw;
@@ -168,7 +126,7 @@ box-shadow: inset 2px 2px 14px 2px rgba(255,255,255,0.7);
 }
 #envio>div>p{
     color: black;
-    font-family: var(--tipoGeneral);
+    font-family: var(--tipoTitulos);
     background-color: transparent !important;
     position: absolute;
   left: 50%;
@@ -177,22 +135,22 @@ box-shadow: inset 2px 2px 14px 2px rgba(255,255,255,0.7);
 }
 .dropdown{
    z-index: 11;
-    background-color: white !important;
+    background-color: var(--colorSec) !important;
 }
 .dropdown>button{
-    color: black !important;
-     background-color: white !important;
+    color: var(--colorClaro) !important;
+     background-color: var(--colorSec) !important;
  }
 .dropdown-menu{
-    background-color: white !important;
+    background-color: var(--colorSec) !important;
    
 }
 .dropdown-item{
-    background-color: white !important;
-    color: black !important;
+    background-color: var(--colorSec) !important;
+    color: var(--colorClaro) !important;
 }
 .dropdown-item:hover{
-    border: 0.5px solid black;
+    border: 0.5px solid var(--colorClaro);
 
 }
 
@@ -218,26 +176,27 @@ box-shadow: inset 2px 2px 14px 2px rgba(255,255,255,0.7);
 
 .menu {
     position: fixed;
-    top: 4em;
-    left: 0;
-    width: 100vw;
-    z-index: 9;
-    padding: 1em 2em;
-    flex-direction: row;
+    top: 12em;
+    left: 2em;
+    width: 6vw;
+    z-index: 10;
+    padding: 5em 2em;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: var(--colorSec) !important;
     transition-duration: 1s;
     display: flex;
-    box-shadow: 0px 6px 15px 0 rgba(255, 255, 255, 0.562);
+    height: 60vh;
 }
 
 .menu>li {
     list-style: none;
-    color: var(--colorClaro);
+    color: var(--colorSec);
   
     font-size: 1em;
     background-color: transparent;
+    transform: rotate(-90deg);
 }
 
 a {
@@ -245,8 +204,8 @@ a {
     background-color: transparent;
     color: var(--colorClaro)  !important;
 }
-.menu>li>a:hover {
-    font-family: 'EditorialNew-Italic' ;
+.menu>li:hover {
+    scale: 120%;
 }
 .menu>li>a>i:hover {
     scale: 120%;
@@ -283,8 +242,8 @@ section>p {
 }
 /* INTRO */
 #intro>div>h1{
-    font-family: var(--tipoFancy2);
-    color: white;
+    font-family: var(--tipoTitulos);
+    color: var(--colorSec);
     font-size: 4em;
 }
 #intro>div>a>p{
@@ -308,9 +267,75 @@ section>p {
 
 }
 #intro>div>img {
-    width: 74vw;
-    margin-top: 5em;
+    width: 40vw;
+    margin-top: 8em;
 }
+/* SHOP */
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  .collection{
+    position: fixed;
+  }
+  .dot1{
+    height: 30px;
+    width: 30px;
+    background-color: var(--colorSec) !important;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1em;
+    cursor: pointer;
+  }
+
+ 
+ 
+  .dot1:hover + div{
+    
+    display: block;
+}
+
+  #col1{
+      position: fixed;
+    top: 8em;
+    left: 21em;
+  }
+
+.info_col1{
+    display: none;
+    position: relative;
+    left: 3em;
+    top: 0.8em;
+    width: 13vw;
+    height: 7vh;
+    z-index: 20;
+    padding: 1em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--colorSec);
+    border-radius: 0%;
+    background-color: var(--colorPrim) !important;
+}
+
+
+.info_col1>p{
+    color: var(--colorClaro);
+}
+
+
+  /* Add some content at the bottom of the video/page */
+  .content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
 
 /* ELENE */
 #elene{
