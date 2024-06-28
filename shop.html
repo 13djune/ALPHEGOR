@@ -10,6 +10,9 @@
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/Chart.min.js"></script>
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
     <script src="https://kit.fontawesome.com/3d1ed1057a.js" crossorigin="anonymous"></script>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,13 +25,14 @@
 </head>
 
 <body>
+    <canvas id="noise" class="noise"></canvas>
     <header>
         <nav id="menu">
            
             <ul class="menu">
 
                 <li><a href="index.html" onclick="closeMenu()" class="menuItem">HOME</a></li>
-                <li><a href="awards.html" onclick="closeMenu()" class="menuItem">AWARDS</a></li>
+                <li><a href="rewards.html" onclick="closeMenu()" class="menuItem">REWARDS</a></li>
                 <li><a href="about.html" onclick="closeMenu()" class="menuItem">ABOUT</a></li>
             
 
@@ -40,24 +44,106 @@
 
     </header>
     
+    
     <section id="start">
         <video autoplay muted loop id="myVideo">
             <source src="img/espacio.mp4" type="video/mp4">
           </video>
-          <div class="collection" id="col1">
-            <span class="dot1"></span>
-            <div class="info_col1">
-                <p>COLLECTION #1</p>
-            </div>
-          </div>
+          <div id="mapa">
+              <div>
+
+                  <img src="img/mapa_espacio.png" data-aos="zoom-in" data-aos-duration="500">
+                  <div class="collection" id="col1"  data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">
+                      <span class="dot1">
+                          
+                      </span>
+                      <div class="info_col1">
+                          <p>COLLECTION #1</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="collection" id="col2" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">
+                    <span class="dot2"></span>
+                    <div class="info_col2">
+                        <p>COLLECTION #2</p>
+                    </div>
+                  </div>
+              </div>
+              </div>
+          
 
           <div class="content">
-            <h1>Heading</h1>
-            <p>Lorem ipsum...</p>
+            <h1>ALPHEGOR SYSTEM</h1>
+            <p>SELECT A PLANET TO CONTINUE...</p>
           </div>
     </section>
 
 
+    <script>
+        function openMenu() {
+            document.getElementById("menu").lastElementChild.style.left = "0%";
+        }
+
+        function closeMenu() {
+            document.getElementById("menu").lastElementChild.style.left = "-110%";
+        }
+
+        function menu() {
+            "use strict";
+            if (document.getElementById("menu").lastElementChild.style.left === "0%") {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('show-menu');
+        }
+
+        function closeMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.remove('show-menu');
+        }
+
+        function generateNoise() {
+            const canvas = document.getElementById('noise');
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width = window.innerWidth;
+            const height = canvas.height = window.innerHeight;
+            const imageData = ctx.createImageData(width, height);
+            const buffer32 = new Uint32Array(imageData.data.buffer);
+            const len = buffer32.length;
+
+            for (let i = 0; i < len; i++) {
+                buffer32[i] = ((255 * Math.random()) | 0) << 24;
+            }
+
+            ctx.putImageData(imageData, 0, 0);
+        }
+
+        function updateNoise() {
+            const canvas = document.getElementById('noise');
+            if (canvas) {
+                generateNoise();
+                requestAnimationFrame(updateNoise);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateNoise();
+        });
+
+        window.addEventListener('resize', () => {
+            const canvas = document.getElementById('noise');
+            if (canvas) {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+        });
+        AOS.init();
+    </script>
 
      
 

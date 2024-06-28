@@ -9,9 +9,11 @@
     <title>ALPHEGOR</title>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/Chart.min.js"></script>
     <script src="https://kit.fontawesome.com/3d1ed1057a.js" crossorigin="anonymous"></script>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,6 +27,7 @@
 </head>
 
 <body>
+    <canvas id="noise" class="noise"></canvas>
     <header>
         <div id="popUp">
             <div>
@@ -38,7 +41,7 @@
                 <form>
                     <div id="mailForm">
                         <label for="email">EMAIL:</label>
-                        <input type="email" value=""><br><br>
+                        <input type="email" value="" required><br><br>
                     </div>
 
                     <input id="sendButton" type="button" value="CONFIRM"
@@ -49,7 +52,7 @@
         <nav id="menu">
             <div id="envio">
                 <div>
-                    <p>ENVÍO GRÁTIS</p>
+                    <p>FREE SHIPPING</p>
                     <div class="dropdown">
                         <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false" style="background-color: white; color: black;">
@@ -69,8 +72,8 @@
             <ul class="menu">
 
                 <li><a href="shop.html" onclick="closeMenu()" class="menuItem">SHOP</a></li>
-                <li><a href="#" onclick="closeMenu()" class="menuItem">AWARDS</a></li>
-                <li><a href="cuenta.html" onclick="closeMenu()" class="menuItem">ABOUT</a></li>
+                <li><a href="rewards.html" onclick="closeMenu()" class="menuItem">REWARDS</a></li>
+                <li><a href="about.html" onclick="closeMenu()" class="menuItem">ABOUT</a></li>
             
 
             </ul>
@@ -81,12 +84,79 @@
 
     </header>
     <section id="intro">
+        
         <div>
             <img src="img/logo_neg.png">
         </div>
         
     </section>
 
+    <script>
+        function openMenu() {
+            document.getElementById("menu").lastElementChild.style.left = "0%";
+        }
+
+        function closeMenu() {
+            document.getElementById("menu").lastElementChild.style.left = "-110%";
+        }
+
+        function menu() {
+            "use strict";
+            if (document.getElementById("menu").lastElementChild.style.left === "0%") {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('show-menu');
+        }
+
+        function closeMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.remove('show-menu');
+        }
+
+        function generateNoise() {
+            const canvas = document.getElementById('noise');
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width = window.innerWidth;
+            const height = canvas.height = window.innerHeight;
+            const imageData = ctx.createImageData(width, height);
+            const buffer32 = new Uint32Array(imageData.data.buffer);
+            const len = buffer32.length;
+
+            for (let i = 0; i < len; i++) {
+                buffer32[i] = ((255 * Math.random()) | 0) << 24;
+            }
+
+            ctx.putImageData(imageData, 0, 0);
+        }
+
+        function updateNoise() {
+            const canvas = document.getElementById('noise');
+            if (canvas) {
+                generateNoise();
+                requestAnimationFrame(updateNoise);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateNoise();
+        });
+
+        window.addEventListener('resize', () => {
+            const canvas = document.getElementById('noise');
+            if (canvas) {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+        });
+
+        AOS.init();
+    </script>
 </body>
 
 </html>
