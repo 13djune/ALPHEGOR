@@ -313,3 +313,18 @@ function cerrarMisdatos() {
 }
 
 /*GRAIN*/
+const glitchElements = document.querySelectorAll('.glitch');
+
+function glitchAnimation() {
+  setInterval(() => {
+    glitchElements.forEach(element => {
+      element.style.transform = `translate(${getRandomInt(-2, 2)}px, ${getRandomInt(-2, 2)}px)`;
+    });
+  }, 200);
+}
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+glitchAnimation();
