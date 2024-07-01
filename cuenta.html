@@ -212,10 +212,176 @@
             </div>
             
         </div>
-
+        <div id="wishlist">
+            <h3>WISH-LIST</h3>
+            <div>
+                <div class="listfav">
+                    <div class="favart"  id="favart1">
+                        <img src="img/collarhada.png"  >
+                        <div class="art_1">
+                            <div class="art_2">
+    
+                                <a href="producto.html">
+                                    <h4>TIT</h4>
+                                    <h5>€59,95</h5>
+                                </a>
+                            </div>
+                            <p>Description</p>
+                            <div class="art_3">
+                                <button class="butCalc" onclick="restarCantidad('favart1')">-</button>
+                                <h2 id="canProducto1">1</h2>
+                                <button class="butCalc" onclick="sumarCantidad('favart1')">+</button>
+                                <i id="cerrar1" class="fa-regular fa-trash-can close-icon" onclick="cerrarFavart1()"></i>
+                            </div>
+                            <button type="button" class="btn btn-secondary" id="buttonWish" onclick="cerrarFavart1()">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="favart"  id="favart2">
+                        <img src="img/collarLazo.png">
+                        <div class="art_1">
+                            <div class="art_2">
+                                <h4>TIT</h4>
+                                <h5>€47,95</h5>
+                            </div>
+                            <p>Description</p>
+                            <div class="art_3">
+                                <button class="butCalc" onclick="restarCantidad('favart2')">-</button>
+                                <h2 id="canProducto2">1</h2>
+                                <button class="butCalc" onclick="sumarCantidad('favart2')">+</button>
+                                <i id="cerrar2" class="fa-regular fa-trash-can close-icon" onclick="cerrarFavart2()"></i>
+                            </div>
+                            <button type="button" class="btn btn-secondary" id="buttonWish" onclick="cerrarFavart2()">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="favart" id="favart3">
+                        <img src="img/collarcorazon.png"  >
+                        <div class="art_1">
+                            <div class="art_2">
+                                <h4>TIT</h4>
+                                <h5>€82,95</h5>
+                            </div>
+                            <p>Description</p>
+                            <div class="art_3">
+                                <button class="butCalc" onclick="restarCantidad('favart3')">-</button>
+                                <h2 id="canProducto3">1</h2>
+                                <button class="butCalc" onclick="sumarCantidad('favart3')">+</button>
+                                <i id="cerrar3" class="fa-regular fa-trash-can close-icon" onclick="cerrarFavart3()"></i>
+                            </div>
+                            <button type="button"class="btn btn-secondary" id="buttonWish"onclick="cerrarFavart3()">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="favart" id="favart1">
+                        <img src="img/penmdientes.png" >
+                        <div class="art_1">
+                            <div class="art_2">
+                                <h4>TIT</h4>
+                                <h5>€43,95</h5>
+                            </div>
+                            <p>Description</p>
+                            <div class="art_3">
+                                <button class="butCalc" onclick="restarCantidad('favart4')">-</button>
+                                <h2 id="canProducto4">1</h2>
+                                <button class="butCalc" onclick="sumarCantidad('favart4')">+</button>
+                                <i id="cerrar4" class="fa-regular fa-trash-can close-icon" onclick="cerrarFavart4()"></i>
+                            </div>
+                            <button type="button" class="btn btn-secondary"id="buttonWish" onclick="cerrarFavart4()">ADD TO CART</button>
+                        </div>
+                    </div>
+                
+                </div>
+                
+            </div>
+            
+        </div>
+        <div id="rewards">
+            <h3>REWARDS</h3>
+            <div>
+                <div>
+                    <img src="img/20.png">
+                    <div>
+                        <h4>Verificar E-mail</h4>
+                        <p>Confirma que el E-mail aportado es tuyo.</p>
+                    </div>
+                    
+                </div>
+                <div>
+                    <img src="img/60.png">
+                    <div>
+                        <h4>Recomendar a un amigx</h4>
+                        <p>Manda tu código exclusivo a alguien.</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
   
     </section>
+    <script>
+        function openMenu() {
+            document.getElementById("menu").lastElementChild.style.left = "0%";
+        }
 
+        function closeMenu() {
+            document.getElementById("menu").lastElementChild.style.left = "-110%";
+        }
+
+        function menu() {
+            "use strict";
+            if (document.getElementById("menu").lastElementChild.style.left === "0%") {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('show-menu');
+        }
+
+        function closeMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.remove('show-menu');
+        }
+
+        function generateNoise() {
+            const canvas = document.getElementById('noise');
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width = window.innerWidth;
+            const height = canvas.height = window.innerHeight;
+            const imageData = ctx.createImageData(width, height);
+            const buffer32 = new Uint32Array(imageData.data.buffer);
+            const len = buffer32.length;
+
+            for (let i = 0; i < len; i++) {
+                buffer32[i] = ((255 * Math.random()) | 0) << 24;
+            }
+
+            ctx.putImageData(imageData, 0, 0);
+        }
+
+        function updateNoise() {
+            const canvas = document.getElementById('noise');
+            if (canvas) {
+                generateNoise();
+                requestAnimationFrame(updateNoise);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateNoise();
+        });
+
+        window.addEventListener('resize', () => {
+            const canvas = document.getElementById('noise');
+            if (canvas) {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+        });
+    </script>
 </body>
 
 </html>

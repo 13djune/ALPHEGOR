@@ -806,18 +806,17 @@ section>p {
 #buy .rounded{
     width:10em;
 }
-
-.favart{
+.favart {
     display: flex;
     align-items: center;
     padding: 1em;
     border: var(--colorFondo);
     border-style: solid;
-    border-radius: 0px;
-    border-width: 3px;
-    margin:  3em 1.5em;
+    height: 50vh;
+
     justify-content: space-between;
-    width: 40%;
+    width: 50%;
+    flex-direction: column;
 }
 
 .listfav{
@@ -829,7 +828,7 @@ section>p {
 }
 
 .art_1{
-    width: 60%;
+  
     padding: 1.5em;
     display: flex;
     flex-direction: column;
@@ -1177,6 +1176,134 @@ margin-top: 0%;
           color: var(--colorClaro);
           font-size: 0.9rem;
       }
+     
+      /*WISSH*/
+      #wishlist{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1em;
+       }
+       #wishlist>h3{
+       
+           margin-bottom: 5px;
+           font-family: var(--tipoGeneral);
+           color: var(--colorSec);
+           border: 2px solid var(--colorSec) !important;
+           padding: 0.4em;
+           width: 100%;
+       
+           text-align: center;
+       
+       }
+      #wishlist>div {
+        display: flex;
+        background-color: var(--colorPrim) !important;
+        flex-wrap: wrap;
+        width: 50vw;
+    }
+       #wishlist>div>div{
+        border: 1px solid var(--colorSec) !important;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        width: 100%;
+        height: 100%;
+    }
+       #wishlist>div>div>img{
+          width: 4em;
+       
+          margin-right: 1em;
+       }
+       #wishlist>div>div>div>p{
+           font-size: 0.7rem;
+           color: var(--colorClaro);
+           font-family: var(--tipoGeneral);
+           margin: 0;
+       }
+       #wishlist>div>div>h1{
+           font-size: 2rem;
+           color: var(--colorClaro);
+           font-family: var(--tipoGeneral);
+           margin: 0;
+       }
+       #wishlist>div>div>div>h4{
+           margin-bottom: 5px;
+           font-family: var(--tipoGeneral);
+           color: var(--colorClaro);
+           font-size: 0.9rem;
+       }
+       #buttonWish {
+  border-radius: 0%;
+        padding: 0.5em;
+        color: var(--colorSec);
+        border: 2px solid var(--colorSec) !important;
+    }
+    #buttonWish:hover{
+        color: var(--colorClaro);
+        background-color: var(--colorSec) !important;
+        padding: 0.5em;
+        border: 2px solid var(--colorSec) !important;
+
+    }
+    /*REWARDS*/
+
+#rewards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+   }
+   #rewards>div>div {
+    display: flex;
+    align-items: center;
+}
+   #rewards>h3{
+   
+       margin-bottom: 5px;
+       font-family: var(--tipoGeneral);
+       color: var(--colorSec);
+       border: 3px solid var(--colorSec) !important;
+       padding: 0.4em;
+       width: 100%;
+   
+       text-align: center;
+   
+   }
+   #rewards>div{
+       border: 2px solid var(--colorSec) !important;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       padding: 1em;
+       background-color: var(--colorPrim) !important;
+       width: 50vw;
+       justify-content: space-around;
+   }
+   #rewards>div>img{
+      width: 4em;
+   
+      margin-right: 1em;
+   }
+   #rewards>div>div>p{
+       font-size: 0.7rem;
+       color: var(--colorClaro);
+       font-family: var(--tipoGeneral);
+       margin: 0;
+   }
+   #rewards>div>h1{
+       font-size: 2rem;
+       color: var(--colorClaro);
+       font-family: var(--tipoGeneral);
+       margin: 0;
+   }
+   #rewards>div>div>h4{
+       margin-bottom: 5px;
+       font-family: var(--tipoGeneral);
+       color: var(--colorClaro);
+       font-size: 0.9rem;
+   }
 /* MEDIAQUERIES */
 @media only screen and (max-width: 1200px) {
 
