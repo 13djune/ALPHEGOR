@@ -44,7 +44,7 @@ header {
 }
 
 .noise {
-    z-index: 200;
+    z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;
@@ -409,6 +409,15 @@ display: flex;
     border: 1px solid var(--colorClaro);
     border-radius: 0px;
 
+}
+#compra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#compra >img{
+    width: 2em;
+    margin-right: 1em;
 }
 
 #logo {
@@ -1030,8 +1039,144 @@ section>p {
 margin: 2em;
 margin-top: 0%;
 }
+/* PERFIL */
+#perfil{
+    display: flex;
+    flex-direction: row;
+}
+#perfil>img{
+    margin: 3em;
+  width: 30vw;
+}
+#perfil>div{
+    display: flex;
+    flex-direction: column;
+}
+#perfil>div>form{
+    display: flex;
+    flex-direction: column;
+}
+#perfil>div>form>input{
+    background-color: var(--colorClaro) !important;
+    border: 2px solid var(--colorSec) !important;
+    width: 20em;
+}
 
+#PERFIL {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 
+#misiones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+   }
+   #misiones>h3{
+   
+       margin-bottom: 5px;
+       font-family: var(--tipoGeneral);
+       color: var(--colorSec);
+       border: 3px solid var(--colorSec) !important;
+       padding: 0.4em;
+       width: 100%;
+   
+       text-align: center;
+   
+   }
+   #misiones>div{
+       border: 2px solid var(--colorSec) !important;
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       padding: 1em;
+       background-color: var(--colorPrim) !important;
+       width: 50vw;
+       justify-content: space-around;
+   }
+   #misiones>div>img{
+      width: 4em;
+   
+      margin-right: 1em;
+   }
+   #misiones>div>div>p{
+       font-size: 0.7rem;
+       color: var(--colorClaro);
+       font-family: var(--tipoGeneral);
+       margin: 0;
+   }
+   #misiones>div>h1{
+       font-size: 2rem;
+       color: var(--colorClaro);
+       font-family: var(--tipoGeneral);
+       margin: 0;
+   }
+   #misiones>div>div>h4{
+       margin-bottom: 5px;
+       font-family: var(--tipoGeneral);
+       color: var(--colorClaro);
+       font-size: 0.9rem;
+   }
+   #inventario{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       margin-top: 1em;
+      }
+      #inventario>h3{
+      
+          margin-bottom: 5px;
+          font-family: var(--tipoGeneral);
+          color: var(--colorSec);
+          border: 2px solid var(--colorSec) !important;
+          padding: 0.4em;
+          width: 100%;
+      
+          text-align: center;
+      
+      }
+      #inventario>div{
+          display: flex;
+          background-color: var(--colorPrim) !important;
+          flex-wrap: wrap;
+          width: 50vw;
+   
+      }
+      #inventario>div>div{
+       border: 1px solid var(--colorSec) !important;
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+       align-items: center;
+       padding: 1em;
+       width: 50%;
+   }
+      #inventario>div>div>img{
+         width: 4em;
+      
+         margin-right: 1em;
+      }
+      #inventario>div>div>div>p{
+          font-size: 0.7rem;
+          color: var(--colorClaro);
+          font-family: var(--tipoGeneral);
+          margin: 0;
+      }
+      #inventario>div>div>h1{
+          font-size: 2rem;
+          color: var(--colorClaro);
+          font-family: var(--tipoGeneral);
+          margin: 0;
+      }
+      #inventario>div>div>div>h4{
+          margin-bottom: 5px;
+          font-family: var(--tipoGeneral);
+          color: var(--colorClaro);
+          font-size: 0.9rem;
+      }
 /* MEDIAQUERIES */
 @media only screen and (max-width: 1200px) {
 
