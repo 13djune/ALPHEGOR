@@ -6,14 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/isotipo_neg.png" style="height: 100%; width: auto;">
-    <title>ALPHEGOR</title>
+    <title>ALPHEGOR #1</title>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/Chart.min.js"></script>
     <script src="https://kit.fontawesome.com/3d1ed1057a.js" crossorigin="anonymous"></script>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -29,26 +27,6 @@
 <body>
     <canvas id="noise" class="noise"></canvas>
     <header>
-        <div id="popUp">
-            <div>
-                <h2>SUBSCRIBE</h2>
-                <p>AND REDEEM YOUR REWARDS</p>
-                <br>
-                <a onclick="ClosePopUp()">
-                    X
-                </a>
-
-                <form>
-                    <div id="mailForm">
-                        <label for="email">EMAIL:</label>
-                        <input type="email" value="" required><br><br>
-                    </div>
-
-                    <input id="sendButton" type="button" value="CONFIRM"
-                        onclick="ClosePopUp()">
-                </form>
-            </div>
-        </div>
         <nav id="menu">
             <div id="envio">
                 <div>
@@ -58,7 +36,7 @@
                             aria-expanded="false" style="background-color: white; color: black;">
                             España (EUR €)
                         </button>
-                        <ul class="dropdown-menu" style="border-radius: 0px;">
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" style="background-color: white; color: black;" href="#">EE.UU
                                     (USD $)</a></li>
                             <li><a class="dropdown-item" style="background-color: white; color: black;" href="#">Japan
@@ -71,7 +49,7 @@
             </div>
             <ul class="menu">
 
-                <li><a href="shop.html" onclick="closeMenu()" class="menuItem">SHOP</a></li>
+                <li><a href="index.html" onclick="closeMenu()" class="menuItem">HOME</a></li>
                 <li><a href="rewards.html" onclick="closeMenu()" class="menuItem">REWARDS</a></li>
                 <li><a href="about.html" onclick="closeMenu()" class="menuItem">ABOUT</a></li>
             
@@ -83,14 +61,84 @@
 
 
     </header>
-    <section id="intro">
-        
-        <div>
-            <video autoplay muted loop id="logo_glitch">
-                <source src="img/Glitch.mp4" type="video/mp4">
-              </video>
-        </div>
-        
+    <section id="buy">
+            <h1>COLLECTION #1</h1>
+    
+                <div class="listfav">
+                    <div class="favart"  id="favart1">
+                        <img src="img/collarhada.png" class="rounded" alt="Marinda" >
+                        <div class="art_1">
+                            <div class="art_2">
+    
+                                <a href="producto.html">
+                                    <h4>TIT</h4>
+                                    <h5>€59,95</h5>
+                                </a>
+                            </div>
+                            <p>Description</p>
+                            <div class="art_3">
+                                <button class="butCalc" onclick="restarCantidad('favart1')">-</button>
+                                <h2 id="canProducto1">1</h2>
+                                <button class="butCalc" onclick="sumarCantidad('favart1')">+</button>
+                                <i id="cerrar1" class="fa-regular fa-trash-can close-icon" onclick="cerrarFavart1()"></i>
+                            </div>
+                            <button type="button" class="btn btn-secondary" onclick="cerrarFavart1()">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="favart"  id="favart2">
+                        <img src="img/collarLazo.png" class="rounded" alt="Ariantha" >
+                        <div class="art_1">
+                            <div class="art_2">
+                                <h4>TIT</h4>
+                                <h5>€47,95</h5>
+                            </div>
+                            <p>Description</p>
+                            <div class="art_3">
+                                <button class="butCalc" onclick="restarCantidad('favart2')">-</button>
+                                <h2 id="canProducto2">1</h2>
+                                <button class="butCalc" onclick="sumarCantidad('favart2')">+</button>
+                                <i id="cerrar2" class="fa-regular fa-trash-can close-icon" onclick="cerrarFavart2()"></i>
+                            </div>
+                            <button type="button" class="btn btn-secondary" onclick="cerrarFavart2()">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="favart" id="favart3">
+                        <img src="img/collarcorazon.png" class="rounded" alt="Carolie" >
+                        <div class="art_1">
+                            <div class="art_2">
+                                <h4>TIT</h4>
+                                <h5>€82,95</h5>
+                            </div>
+                            <p>Description</p>
+                            <div class="art_3">
+                                <button class="butCalc" onclick="restarCantidad('favart3')">-</button>
+                                <h2 id="canProducto3">1</h2>
+                                <button class="butCalc" onclick="sumarCantidad('favart3')">+</button>
+                                <i id="cerrar3" class="fa-regular fa-trash-can close-icon" onclick="cerrarFavart3()"></i>
+                            </div>
+                            <button type="button"class="btn btn-secondary" onclick="cerrarFavart3()">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="favart" id="favart1">
+                        <img src="img/penmdientes.png" class="rounded" alt="Nixiria" >
+                        <div class="art_1">
+                            <div class="art_2">
+                                <h4>TIT</h4>
+                                <h5>€43,95</h5>
+                            </div>
+                            <p>Description</p>
+                            <div class="art_3">
+                                <button class="butCalc" onclick="restarCantidad('favart4')">-</button>
+                                <h2 id="canProducto4">1</h2>
+                                <button class="butCalc" onclick="sumarCantidad('favart4')">+</button>
+                                <i id="cerrar4" class="fa-regular fa-trash-can close-icon" onclick="cerrarFavart4()"></i>
+                            </div>
+                            <button type="button" class="btn btn-secondary" onclick="cerrarFavart4()">ADD TO CART</button>
+                        </div>
+                    </div>
+                
+                </div>
+      
     </section>
 
     <script>
@@ -156,8 +204,6 @@
                 canvas.height = window.innerHeight;
             }
         });
-
-        AOS.init();
     </script>
 </body>
 
