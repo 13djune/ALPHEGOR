@@ -80,7 +80,7 @@
                 </ul>
             </div>
             <div id="img_col">
-                <img src="img/IMG_9593.png" alt="">
+                <img src="img/MODELO_1.png" class="animate__animated animate__flipInY" alt="">
             </div>
             <div>
                 <h2>TITULO2</h2>
@@ -93,10 +93,33 @@
                 </ul>
             </div>
         </div>
-        <div id="RA" class="animate__animated animate__flipInY">
-            <a>
-                <img src="img/augmented-reality.png" class="animate__animated animate__flipInY" alt="">
+        <div id="RA">
+            <a id="RA_Button" href="#">
+                <img src="img/augmented-reality.png" alt="Augmented Reality">
             </a>
+        </div>
+        <div id="popup_RA" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <div>
+
+                    <h2>PERMITIR ABRIR CÁMARA</h2>
+                    <p>Experimenta nuestra colección de una manera innovadora. Con la función de Realidad Aumentada, podrás ver cómo te queda nuestra ropa en tiempo real usando la cámara de tu dispositivo.</p>
+                    <p>¿Cómo Funciona?</p>
+                    <p>
+                        <ul>
+                            <li>Permiso para la Cámara: Necesitamos acceder a tu cámara para mostrarte la ropa en tiempo real.</li>
+                        <li>Prueba Virtual: Selecciona las prendas y ajústalas sobre tu cuerpo para ver cómo te quedan.</li>
+                       <li>Explora y Disfruta: Cambia entre diferentes estilos y encuentra tu look perfecto desde casa.</li>
+                    </ul>
+                    </p>
+                    <p>Tu privacidad es importante para nosotros. Las imágenes de la cámara no se guardan ni se comparten. El acceso es solo para esta experiencia y se desactiva cuando cierras la función.</p>
+               <button id="permitButton">PERMITIR</button>
+                </div>
+            </div>
+        </div>
+        <div id="BUY">
+           <button>BUY</button>
         </div>
         
     </section>
@@ -164,8 +187,37 @@
                 canvas.height = window.innerHeight;
             }
         });
+        var popup = document.getElementById("popup_RA");
+        document.addEventListener('DOMContentLoaded', function() {
+    var popup = document.getElementById('popup_RA');
+    var raButton = document.getElementById('RA_Button');
+    var closeButton = document.querySelector('.popup .close');
+    var permitButton = document.getElementById('permitButton');
 
+    // Mostrar el popup al hacer clic en el enlace
+    raButton.addEventListener('click', function() {
+        popup.style.display = 'block';
+    });
+
+    // Cerrar el popup al hacer clic en la "x"
+    closeButton.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+
+    // Cerrar el popup al hacer clic en el botón "PERMITIR"
+    permitButton.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+
+    // Cerrar el popup si se hace clic fuera del contenido del popup
+    window.addEventListener('click', function(event) {
+        if (event.target == popup) {
+            popup.style.display = 'none';
+        }
+    });
+});
         AOS.init();
+        
     </script>
 </body>
 
