@@ -52,7 +52,19 @@
         <nav id="menu">
             <div id="envio">
                 <div>
-                    <p>FREE SHIPPING</p>
+                    <div id="perfil">
+
+                      
+                            <div><img src="img/male-user.png" alt="Perfil" id="perfil-img" onclick="toggleInfo()"> </div>
+                            <div><p>Nvl. 08</p></div>
+                        
+                        <div class="progreso-bar">
+                            
+                            <div class="progreso"></div>
+                
+                        </div>
+                        <div><p>75%</p></div>
+                    </div>
                     <div class="dropdown">
                         <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false" style="background-color: white; color: black;">
@@ -67,6 +79,68 @@
                                     (GBP £)</a></li>
                         </ul>
                     </div>
+                    <div id="info_perfil" class="info_p">
+                        <div>
+                            <div id="perfilito">
+                                <img src="img/male-user.png">
+                                <div>
+
+                                    <h2>MIGUEL ALONSO FRUTOS</h2>
+                        
+                                    <p>Miembro desde 06/05/2024</p>
+                                    <p>miguelalonso@gmail.com</p>
+                                    <p>C/Alfonso XII, 42, Madrid, 28005</p>
+                                </div>
+                            </div>
+                            <div id="misionitas">
+                                <h3>MISSIONS</h3>
+                                <div>
+                                    <img src="img/20.png">
+                                    <div>
+                                        <h4>Verificar E-mail</h4>
+                                        <p>Confirma que el E-mail aportado es tuyo.</p>
+                                    </div>
+                                    <h1>></h1>
+                                </div>
+                                <div>
+                                    <img src="img/60.png">
+                                    <div>
+                                        <h4>Recomendar a un amigx</h4>
+                                        <p>Manda tu código exclusivo a alguien.</p>
+                                    </div>
+                                    <h1>></h1>
+                                </div>
+                                
+                            </div>
+                            <div id="inventorito">
+                                <h3>INVENTORY</h3>
+                                <div>
+                                    <div>
+                                        <img src="img/20.png">
+                                        <div>
+                                            <h4>Verificar E-mail</h4>
+                                            <p>Confirma que el E-mail aportado es tuyo.</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div>
+                                        <img src="img/60.png">
+                                        <div>
+                                            <h4>Recomendar a un amigx</h4>
+                                            <p>Manda tu código exclusivo a alguien.</p>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div id="ver_mas">
+                                <button >IR AL PERFIL</button>
+                            </div>
+                        </div>
+                    </div>
+                
                 </div>
             </div>
             <ul class="menu">
@@ -77,8 +151,8 @@
             
 
             </ul>
-            <a href="javascript:void(0);" style="color: #006494; background-color: transparent !important;" class="hamburguer" onclick="toggleMenu()">
-                                <i style="color: #006494; background-color: transparent !important;" class="fa fa-bars"></i></a>
+            <a href="javascript:void(0);" style="color: #000; background-color: transparent !important;" class="hamburguer" onclick="toggleMenu()">
+                                <i style="color: #000; background-color: transparent !important;" class="fa fa-bars"></i></a>
         </nav>
 
 
@@ -156,6 +230,28 @@
                 canvas.height = window.innerHeight;
             }
         });
+    
+
+        // Obtener referencia al bloque de información
+var infoPerfil = document.getElementById('info_perfil');
+
+// Obtener referencia a la imagen de perfil
+var perfilImg = document.getElementById('perfil-img');
+
+// Función para alternar la visibilidad del bloque de información
+function toggleInfo() {
+    infoPerfil.style.display = (infoPerfil.style.display === 'block') ? 'none' : 'block';
+}
+
+// Event listener para ocultar el bloque de información si se hace clic fuera de él
+document.addEventListener('click', function(event) {
+    var targetElement = event.target; // Elemento donde se hizo clic
+
+    // Verificar si se hizo clic fuera del bloque de información y fuera de la imagen de perfil
+    if (!infoPerfil.contains(targetElement) && targetElement !== perfilImg) {
+        infoPerfil.style.display = 'none'; // Ocultar el bloque de información
+    }
+});
 
         AOS.init();
     </script>

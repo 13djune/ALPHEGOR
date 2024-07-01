@@ -313,3 +313,7 @@ function cerrarMisdatos() {
 }
 
 
+function toggleInfo() {
+    var info = document.getElementById('info_perfil');
+    info.style.display = (info.style.display === 'block') ? 'none' : 'block';
+}

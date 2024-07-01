@@ -30,13 +30,25 @@
         <nav id="menu">
             <div id="envio">
                 <div>
-                    <p>ENVÍO GRÁTIS</p>
+                    <div id="perfil">
+
+                      
+                            <div><img src="img/male-user.png" alt="Perfil" id="perfil-img" onclick="toggleInfo()"> </div>
+                            <div><p>Nvl. 08</p></div>
+                        
+                        <div class="progreso-bar">
+                            
+                            <div class="progreso"></div>
+                
+                        </div>
+                        <div><p>75%</p></div>
+                    </div>
                     <div class="dropdown">
                         <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false" style="background-color: white; color: black;">
                             España (EUR €)
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" style="border-radius: 0px;">
                             <li><a class="dropdown-item" style="background-color: white; color: black;" href="#">EE.UU
                                     (USD $)</a></li>
                             <li><a class="dropdown-item" style="background-color: white; color: black;" href="#">Japan
@@ -45,28 +57,82 @@
                                     (GBP £)</a></li>
                         </ul>
                     </div>
+                    <div id="info_perfil" class="info_p">
+                        <div>
+                            <div id="perfilito">
+                                <img src="img/male-user.png">
+                                <div>
+
+                                    <h2>MIGUEL ALONSO FRUTOS</h2>
+                        
+                                    <p>Miembro desde 06/05/2024</p>
+                                    <p>miguelalonso@gmail.com</p>
+                                    <p>C/Alfonso XII, 42, Madrid, 28005</p>
+                                </div>
+                            </div>
+                            <div id="misionitas">
+                                <h3>MISSIONS</h3>
+                                <div>
+                                    <img src="img/20.png">
+                                    <div>
+                                        <h4>Verificar E-mail</h4>
+                                        <p>Confirma que el E-mail aportado es tuyo.</p>
+                                    </div>
+                                    <h1>></h1>
+                                </div>
+                                <div>
+                                    <img src="img/60.png">
+                                    <div>
+                                        <h4>Recomendar a un amigx</h4>
+                                        <p>Manda tu código exclusivo a alguien.</p>
+                                    </div>
+                                    <h1>></h1>
+                                </div>
+                                
+                            </div>
+                            <div id="inventorito">
+                                <h3>INVENTORY</h3>
+                                <div>
+                                    <div>
+                                        <img src="img/20.png">
+                                        <div>
+                                            <h4>Verificar E-mail</h4>
+                                            <p>Confirma que el E-mail aportado es tuyo.</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div>
+                                        <img src="img/60.png">
+                                        <div>
+                                            <h4>Recomendar a un amigx</h4>
+                                            <p>Manda tu código exclusivo a alguien.</p>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div id="ver_mas">
+                                <a href="cuenta.html">IR AL PERFIL</a>
+                            </div>
+                        </div>
+                    </div>
+                
                 </div>
             </div>
             <ul class="menu">
-                <li><a href="col_elene.html" onclick="closeMenu()" class="menuItem">JOYAS</a></li>
-                <li><a href="colecciones.html" onclick="closeMenu()" class="menuItem">COLECCIONES</a></li>
-                <li><a href="index.html" onclick="closeMenu()" class="menuItem">PROMOCIONES</a></li>
-                <li>
-                    <div id="logo"></div>
-                </li>
-                <li><a href="col_elene.html" onclick="closeMenu()" class="menuItem"><i class="fa-solid fa-cart-shopping"
-                            style="color: #ffffff;"></i></a></li>
-                <li><a href="index.html" onclick="closeMenu()" class="menuItem"><i class="fa-solid fa-magnifying-glass"
-                            style="color: #ffffff;"></i></a></li>
-                <li><a href="cuenta.html" onclick="closeMenu()" class="menuItem">CUENTA</a></li>
-                <li><a href="favs.html" onclick="closeMenu()" class="menuItem">F<i class="fa-regular fa-star"
-                            style="color: #ffffff; background-color: transparent !important;"></i>VORITOS</a></li>
-                            
+
+                <li><a href="shop.html" onclick="closeMenu()" class="menuItem">SHOP</a></li>
+                <li><a href="rewards.html" onclick="closeMenu()" class="menuItem">REWARDS</a></li>
+                <li><a href="about.html" onclick="closeMenu()" class="menuItem">ABOUT</a></li>
+            
 
             </ul>
-            <a href="javascript:void(0);" style="color: #ffffff; background-color: transparent !important;" class="hamburguer" onclick="toggleMenu()">
-            <i style="color: #ffffff; background-color: transparent !important;" class="fa fa-bars"></i></a>
+            <a href="javascript:void(0);" style="color: #000; background-color: transparent !important;" class="hamburguer" onclick="toggleMenu()">
+                                <i style="color: #000; background-color: transparent !important;" class="fa fa-bars"></i></a>
         </nav>
+
 
 
     </header>
@@ -84,7 +150,7 @@
                 <div class="ventana-content">
                     <span class="close" onclick="cerrarVentana()">&times;</span>
                     <h1>HISTORIAL DE PEDIDOS</h1>
-                    <h3>Aún no tienes pedidos :(</h3>
+                    <h3>Aún no tienes pedidos.</h3>
                 </div>
             </div>
 

@@ -145,16 +145,227 @@ header {
     border-color: var(--colorSec);
     border-image: initial;
 }
+
+#sendButton {
+    background-color: var(--colorClaro) !important;
+    padding: 0.5em;
+    border: 2px solid var(--colorSec) !important;
+}
 #sendButton:hover{
-    -webkit-box-shadow: inset 2px 2px 14px 2px rgba(255,255,255,0.7);
--moz-box-shadow: inset 2px 2px 14px 2px rgba(255,255,255,0.7);
-box-shadow: inset 2px 2px 14px 2px rgba(255,255,255,0.7);
+    color: var(--colorClaro);
+    background-color: var(--colorSec) !important;
+    padding: 0.5em;
+    border: 2px solid var(--colorSec) !important;
+}
+#perfil{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2em;
+}
+#perfil>div{
+   margin-right: 0.5em;
+}
+#perfil>div>img{
+   width: 3em;
+   border: 2px solid var(--colorSec) !important;
+ }
+ #perfil>div>p{
+   margin: 0%;
+  }
+
+
+  #info_perfil{
+    background-color: var(--colorSec) !important;
+  }
+.info_p {
+    display: none;
+    padding: 10px;
+color: var(--colorClaro);
+    border: 3px solid var(--colorSec) !important;
+    width: 400px;
+    position: absolute;
+    z-index: 300;
+    top: 4em;
+    left: 7em;
+}
+
+#perfilito>div>h2 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-family: var(--tipoGeneral);
+    color: var(--colorClaro);
+}
+
+#perfilito>div>p {
+    font-size: 0.7rem;
+    color: var(--colorClaro);
+    font-family: var(--tipoGeneral);
+    margin: 0;
+}
+#perfilito {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#perfilito>img {
+    width: 8em;
+}
+#perfilito>div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+}
+#misionitas{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin-top: 1em;
+}
+#misionitas>h3{
+
+    margin-bottom: 5px;
+    font-family: var(--tipoGeneral);
+    color: var(--colorClaro);
+    border: 2px solid var(--colorClaro) !important;
+    padding: 0.4em;
+    width: 100%;
+
+    text-align: center;
+
+}
+#misionitas>div{
+    border: 1px solid var(--colorClaro) !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em;
+}
+#misionitas>div>img{
+   width: 4em;
+
+   margin-right: 1em;
+}
+#misionitas>div>div>p{
+    font-size: 0.7rem;
+    color: var(--colorClaro);
+    font-family: var(--tipoGeneral);
+    margin: 0;
+}
+#misionitas>div>h1{
+    font-size: 2rem;
+    color: var(--colorClaro);
+    font-family: var(--tipoGeneral);
+    margin: 0;
+}
+#misionitas>div>div>h4{
+    margin-bottom: 5px;
+    font-family: var(--tipoGeneral);
+    color: var(--colorClaro);
+    font-size: 0.9rem;
+}
+#inventorito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+   }
+   #inventorito>h3{
+   
+       margin-bottom: 5px;
+       font-family: var(--tipoGeneral);
+       color: var(--colorClaro);
+       border: 2px solid var(--colorClaro) !important;
+       padding: 0.4em;
+       width: 100%;
+   
+       text-align: center;
+   
+   }
+   #inventorito>div{
+       display: flex;
+ 
+       flex-wrap: wrap;
+
+   }
+   #inventorito>div>div{
+    border: 1px solid var(--colorClaro) !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1em;
+    width: 50%;
+}
+   #inventorito>div>div>img{
+      width: 4em;
+   
+      margin-right: 1em;
+   }
+   #inventorito>div>div>div>p{
+       font-size: 0.7rem;
+       color: var(--colorClaro);
+       font-family: var(--tipoGeneral);
+       margin: 0;
+   }
+   #inventorito>div>div>h1{
+       font-size: 2rem;
+       color: var(--colorClaro);
+       font-family: var(--tipoGeneral);
+       margin: 0;
+   }
+   #inventorito>div>div>div>h4{
+       margin-bottom: 5px;
+       font-family: var(--tipoGeneral);
+       color: var(--colorClaro);
+       font-size: 0.9rem;
+   }
+   #ver_mas {
+
+margin: 2.5em;    
+display: flex;
+    justify-content: center;
+}
+
+#ver_mas>a {
+    background-color: var(--colorClaro) !important;
+    padding: 0.5em;
+    border: 2px solid var(--colorSec) !important;
+}
+
+.progreso-bar {
+    width: 300px;
+    height: 25px;
+    background-color: var(--colorClaro) !important;
+    border: 3px solid var(--colorSec) !important;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.progreso {
+    width: 0%;
+    height: 100%;
+    background-color: var(--colorSec) !important;
+    border-radius: 0px;
+    animation: progresoAnimation 3s forwards;
+}
+
+@keyframes progresoAnimation {
+    0% {
+        width: 0%;
+    }
+    75% {
+        width: 75%;
+    }
+    100% {
+        width: 75%;
+    }
 }
 
 #envio>div{
     background-color: var(--colorClaro) !important;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     width: 100vw;
     height: 4em;
     position: fixed;
@@ -164,6 +375,7 @@ box-shadow: inset 2px 2px 14px 2px rgba(255,255,255,0.7);
     align-items: center;
     z-index: 10;
     border-bottom: 3px solid var(--colorSec);
+    justify-content: space-between;
 }
 #envio>div>p{
     color: var(--colorSec);
@@ -351,9 +563,9 @@ section {
 
 section>h1 {
     text-align: center;
-    color: var(--colorClaro);
+    color: var(--colorSec);
     font-size: 3em;
-    padding: 2em;
+    padding-bottom: 1em;
     font-family: var(--tipoTitulos);
 }
 
@@ -361,7 +573,7 @@ section>p {
     text-align: justify;
     margin: 1em;
     font-family: var(--tipoGeneral);
-    color: var(--colorClaro);
+    color: var(--colorSec);
 }
 /* INTRO */
 #intro>div>h1{
@@ -449,7 +661,7 @@ section>p {
     position: absolute;
     left: 4em;
     top: 4em;
-    width: 13vw;
+    width: 10vw;
     height: 7vh;
     z-index: 20;
     padding: 1em;
@@ -490,17 +702,17 @@ section>p {
 .info_col2{
     display: none;
     position: absolute;
-    left: 24em;
+    right: 36em;
     top: -4em;
-    width: 13vw;
+    width: 12vw;
     height: 7vh;
     z-index: 20;
     padding: 1em;
     border-width: 2px;
     border-style: solid;
-    border-color: var(--colorSec);
+    border-color: var(--colorClaro) !important;
     border-radius: 0%;
-    background-color: var(--colorPrim) !important;
+    background-color: var(--colorBlanco) !important;
 }
 
 
@@ -508,6 +720,50 @@ section>p {
     color: var(--colorClaro);
 }
 
+
+.dot3{
+    height: 20px;
+    width: 20px;
+    background: radial-gradient(circle, rgb(63, 251, 119) 0%, rgb(252, 143, 70) 100%) !important;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1em;
+    cursor: pointer;
+  }
+
+ 
+ 
+  .dot3:hover + div{
+    
+    display: block;
+}
+
+  #col3{
+    position: relative;
+    top: -3em;
+    left: 6em;
+  }
+
+.info_col3{
+    display: none;
+    position: absolute;
+    top: -4em;
+    right: 37em;
+    width: 11vw;
+    height: 7vh;
+    z-index: 20;
+    padding: 1em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--colorClaro) !important;
+    border-radius: 0%;
+    background-color: var(--colorBlanco) !important;
+}
+
+
+.info_col3>p{
+    color: var(--colorClaro);
+}
 
   /* Add some content at the bottom of the video/page */
   .content {
@@ -654,6 +910,26 @@ section>p {
     border-bottom: 0px;
     padding: 0.5em;
     background-color: var(--colorPrim) !important;
+    cursor: pointer; 
+}
+.popup-text {
+    font-size: smaller;
+    color: var(--colorSec);
+    display: none;
+    position: relative;
+    width: 230px;
+    padding: 10px;
+    background-color: var(--colorBlanco);
+    border: 3px solid var(--colorSec);
+    z-index: 100;
+
+}
+.popup-text > p{
+    margin-bottom: 0%;
+}
+/* Mostrar el cuadro de texto al hacer hover sobre el li */
+#COL1_INFO div ul li:hover .popup-text {
+    display: block;
 }
 #COL1_INFO>div>ul>li:last-child{
 
@@ -663,9 +939,11 @@ section>p {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: fixed;
+    left: 7em;
+    bottom: 4em;
 }
 #RA>a {
-   flex: 100%;
    cursor: pointer;
 }
 #RA>a>img {
@@ -677,9 +955,8 @@ section>p {
     position: fixed; /* Stay in place */
     z-index: 200; /* Sit on top */
     left: 0;
-    top: 0;
+    bottom: 0;
     width: 100%; /* Full width */
-    height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0) !important; /* Fallback color */
     background-color: rgba(0,0,0,0.4) !important; /* Black w/ opacity */
