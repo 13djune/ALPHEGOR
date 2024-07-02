@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/isotipo_neg.png" style="height: 100%; width: auto;">
+    <title>ALPHEGOR</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/3d1ed1057a.js" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Prosto+One&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <canvas id="noise" class="noise"></canvas>
+    <header>
+      
+        <nav id="menu">
+            <div id="envio">
+                <div>
+                    <div id="perfil">
+
+                      
+                            <div><img src="img/male-user.png" alt="Perfil" id="perfil-img" onclick="toggleInfo()"> </div>
+                            <div><p>Nvl. 08</p></div>
+                        
+                        <div class="progreso-bar">
+                            
+                            <div class="progreso"></div>
+                
+                        </div>
+                        <div><p>75%</p></div>
+                    </div>
+                    <div id="compra">
+                        <img src="img/shopping-cart.png">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" style="background-color: white; color: black;">
+                                España (EUR €)
+                            </button>
+                            <ul class="dropdown-menu" style="border-radius: 0px;">
+                                <li><a class="dropdown-item" style="background-color: white; color: black;" href="#">EE.UU
+                                        (USD $)</a></li>
+                                <li><a class="dropdown-item" style="background-color: white; color: black;" href="#">Japan
+                                        (JPY ¥)</a></li>
+                                <li><a class="dropdown-item" style="background-color: white; color: black;" href="#">U.K
+                                        (GBP £)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="info_perfil" class="info_p">
+                        <div>
+                            <div id="perfilito">
+                                <img src="img/male-user.png">
+                                <div>
+
+                                    <h2>MIGUEL ALONSO FRUTOS</h2>
+                        
+                                    <p>Miembro desde 06/05/2024</p>
+                                    <p>miguelalonso@gmail.com</p>
+                                    <p>C/Alfonso XII, 42, Madrid, 28005</p>
+                                </div>
+                            </div>
+                            <div id="misionitas">
+                                <h3>MISSIONS</h3>
+                                <div>
+                                    <img src="img/20.png">
+                                    <div>
+                                        <h4>Verificar E-mail</h4>
+                                        <p>Confirma que el E-mail aportado es tuyo.</p>
+                                    </div>
+                                    <h1>></h1>
+                                </div>
+                                <div>
+                                    <img src="img/60.png">
+                                    <div>
+                                        <h4>Recomendar a un amigx</h4>
+                                        <p>Manda tu código exclusivo a alguien.</p>
+                                    </div>
+                                    <h1>></h1>
+                                </div>
+                                
+                            </div>
+                            <div id="inventorito">
+                                <h3>INVENTORY</h3>
+                                <div>
+                                    <div>
+                                        <img src="img/blockchain_w.png">
+                                        <div>
+                                            <h4>########</h4>
+                                            <p>ajsndcqw dq wdqhw dihqw dqwd qwdq dqwdhqw</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div>
+                                        <img src="img/blockchain_w.png">
+                                        <div>
+                                            <h4>########</h4>
+                                            <p>ajsndcqw dq wdqhw dihqw dqwd qwdq dqwdhqw</p>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div id="ver_mas">
+                                <a href="cuenta.html">IR AL PERFIL</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <ul class="menu">
+
+                <li><a href="shop.html" onclick="closeMenu()" class="menuItem">SHOP</a></li>
+                <li><a href="cuenta.html" onclick="closeMenu()" class="menuItem">PROFILE</a></li>
+                <li><a href="about.html" onclick="closeMenu()" class="menuItem">ABOUT</a></li>
+            
+
+            </ul>
+            <a href="javascript:void(0);" style="color: #000; background-color: transparent !important;" class="hamburguer" onclick="toggleMenu()">
+                                <i style="color: #000; background-color: transparent !important;" class="fa fa-bars"></i></a>
+        </nav>
+
+
+    </header>
+    <section id="col_2">
+        
+        <div>
+            <video autoplay muted loop id="logo_glitch2">
+                <source src="img/Glitch.mp4" type="video/mp4">
+              </video>
+              <p>COMING SOON</p>
+              <p id="demo"></p>
+        </div>
+        
+    </section>
+
+    <script>
+        function openMenu() {
+            document.getElementById("menu").lastElementChild.style.left = "0%";
+        }
+
+        function closeMenu() {
+            document.getElementById("menu").lastElementChild.style.left = "-110%";
+        }
+
+        function menu() {
+            "use strict";
+            if (document.getElementById("menu").lastElementChild.style.left === "0%") {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('show-menu');
+        }
+
+        function closeMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.remove('show-menu');
+        }
+
+        function generateNoise() {
+            const canvas = document.getElementById('noise');
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width = window.innerWidth;
+            const height = canvas.height = window.innerHeight;
+            const imageData = ctx.createImageData(width, height);
+            const buffer32 = new Uint32Array(imageData.data.buffer);
+            const len = buffer32.length;
+
+            for (let i = 0; i < len; i++) {
+                buffer32[i] = ((255 * Math.random()) | 0) << 24;
+            }
+
+            ctx.putImageData(imageData, 0, 0);
+        }
+
+        function updateNoise() {
+            const canvas = document.getElementById('noise');
+            if (canvas) {
+                generateNoise();
+                requestAnimationFrame(updateNoise);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateNoise();
+        });
+
+        window.addEventListener('resize', () => {
+            const canvas = document.getElementById('noise');
+            if (canvas) {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+        });
+    
+
+        // Obtener referencia al bloque de información
+var infoPerfil = document.getElementById('info_perfil');
+
+// Obtener referencia a la imagen de perfil
+var perfilImg = document.getElementById('perfil-img');
+
+// Función para alternar la visibilidad del bloque de información
+function toggleInfo() {
+    infoPerfil.style.display = (infoPerfil.style.display === 'block') ? 'none' : 'block';
+}
+
+// Event listener para ocultar el bloque de información si se hace clic fuera de él
+document.addEventListener('click', function(event) {
+    var targetElement = event.target; // Elemento donde se hizo clic
+
+    // Verificar si se hizo clic fuera del bloque de información y fuera de la imagen de perfil
+    if (!infoPerfil.contains(targetElement) && targetElement !== perfilImg) {
+        infoPerfil.style.display = 'none'; // Ocultar el bloque de información
+    }
+});
+
+        AOS.init();
+        // Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2025 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+    </script>
+</body>
+
+</html>

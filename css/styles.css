@@ -624,7 +624,6 @@ section>p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 
 }
 #intro>div>img {
@@ -951,6 +950,27 @@ section>p {
 }
 .popup-text > p{
     margin-bottom: 0%;
+}
+/*COL2*/
+#col_2>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#col_2>div>p{
+   font-size: 2em;
+   z-index: 300;
+}
+#col_2>div>img {
+    width: 30vw;
+    margin-top: 7em;
+}
+#logo_glitch2{
+    position: absolute;
+
+    bottom: 0;
+    width: 80vw;
 }
 /* Mostrar el cuadro de texto al hacer hover sobre el li */
 #COL1_INFO div ul li:hover .popup-text {
