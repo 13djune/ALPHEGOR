@@ -524,9 +524,7 @@ a {
 }
 .showMenu {
     transform: translateY(0);
-  }
-
-  .menu_about{
+  } .menu_about {
     position: fixed;
     top: 12em;
     right: 2em;
@@ -552,15 +550,30 @@ a {
     color: var(--colorSec) !important;
     font-size: 1em;
     background-color: transparent;
-   
+    position: relative; /* Necesario para posicionar la info */
 }
 .menu_about>li>a {
     color: var(--colorSec) !important;
-    
 }
 .menu_about>li:hover {
     scale: 120%;
-    
+}
+
+.info {
+    display: none;
+    position: absolute;
+    right: 3em;
+    top: 0;
+    color: var(--colorClaro) !important;
+    background-color: var(--colorSec) !important;
+    border: 3px solid var(--colorSec) !important;
+    padding: 5px;
+    white-space: nowrap;
+    z-index: 20;
+}
+
+.menu_about>li:hover .info {
+    display: block;
 }
 /* SECTIONS */
 section {
@@ -877,7 +890,7 @@ section>p {
 #COL_1{
     display: flex;
     flex-direction: column;
-
+ height: 100%;
 }
 #img_col>img{
     width: 40vw;
