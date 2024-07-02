@@ -288,6 +288,11 @@ color: var(--colorClaro);
        flex-wrap: wrap;
 
    }
+   #inventorito>div>div>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
    #inventorito>div>div{
     border: 1px solid var(--colorClaro) !important;
     display: flex;
@@ -299,8 +304,6 @@ color: var(--colorClaro);
 }
    #inventorito>div>div>img{
       width: 4em;
-   
-      margin-right: 1em;
    }
    #inventorito>div>div>div>p{
        font-size: 0.7rem;
@@ -1024,7 +1027,7 @@ section>p {
 }
 #BUY{
     position: fixed;
-    right: 7em;
+    right: 4em;
     bottom: 4em;
 
 }
@@ -1058,14 +1061,16 @@ margin-top: 0%;
     flex-direction: row;
     align-items: center;
 }
-#perfilote>img{
+#perfilote>div>img{
     margin: 3em;
+    margin-bottom: 0.5em;
   width: 30vw;
   border: 3px solid var(--colorSec) !important;
 }
-#perfilote>div{
+#perfilote>div {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 #perfilote>div>form{
     display: flex;
@@ -1118,7 +1123,7 @@ margin-top: 0%;
    
    }
    #misiones>div{
-       border: 2px solid var(--colorSec) !important;
+       border: 3px solid var(--colorSec) !important;
        display: flex;
        flex-direction: row;
        align-items: center;
@@ -1162,7 +1167,7 @@ margin-top: 0%;
           margin-bottom: 5px;
           font-family: var(--tipoGeneral);
           color: var(--colorSec);
-          border: 2px solid var(--colorSec) !important;
+          border: 3px solid var(--colorSec) !important;
           padding: 0.4em;
           width: 100%;
       
@@ -1177,7 +1182,7 @@ margin-top: 0%;
    
       }
       #inventario>div>div{
-       border: 2px solid var(--colorSec) !important;
+       border: 3px solid var(--colorSec) !important;
        display: flex;
        flex-direction: column;
        flex-wrap: wrap;
@@ -1185,14 +1190,19 @@ margin-top: 0%;
        padding: 1em;
        width: 50%;
    }
+   #inventario>div>div>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
       #inventario>div>div>img{
-         width: 4em;
+         width: 6em;
       
-         margin-right: 1em;
+
       }
       #inventario>div>div>div>p{
           font-size: 0.7rem;
-          color: var(--colorClaro);
+          color: var(--colorSec);
           font-family: var(--tipoGeneral);
           margin: 0;
       }
@@ -1205,8 +1215,8 @@ margin-top: 0%;
       #inventario>div>div>div>h4{
           margin-bottom: 5px;
           font-family: var(--tipoGeneral);
-          color: var(--colorClaro);
-          font-size: 0.9rem;
+          color: var(--colorSec);
+
       }
      
       /*WISSH*/
@@ -1221,7 +1231,7 @@ margin-top: 0%;
            margin-bottom: 5px;
            font-family: var(--tipoGeneral);
            color: var(--colorSec);
-           border: 2px solid var(--colorSec) !important;
+           border: 3px solid var(--colorSec) !important;
            padding: 0.4em;
            width: 100%;
        
@@ -1339,6 +1349,7 @@ margin-top: 0%;
        font-family: var(--tipoGeneral);
        margin: 0;
        padding: 1em;
+       cursor: pointer;
    }
    #rewards>div>div>div>h4{
        margin-bottom: 5px;
