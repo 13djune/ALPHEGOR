@@ -80,7 +80,15 @@ header {
   }
 
 */
+#copyright{
 
+        position: relative;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+}
 #popUp {
     position: fixed;
     left: 50%;
@@ -792,18 +800,31 @@ section>p {
 }
 
   /* Add some content at the bottom of the video/page */
-  .content {
-    position: fixed;
-    bottom: 0;
-
-    color: var(--colorClaro) !important;
-    width: 100%;
-    padding: 20px;
+  #planetas{
+ 
+        position: absolute;
+        bottom: 0em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    
   }
-  .content>p {
-
+  .text {
+    font-weight: 100;
+    font-size: 28px;
+    color: #FAFAFA;
+  }
+  .dud {
+    color: #757575;
+  }
+  .content {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+  }
+  .content > p {
     color: var(--colorClaro) !important;
-   
   }
 
 
