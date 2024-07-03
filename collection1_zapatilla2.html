@@ -6,16 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/isotipo_neg.png" style="height: 100%; width: auto;">
-    <title>ALPHEGOR_PERFIL</title>
+    <title>ALPHEGOR</title>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/Chart.min.js"></script>
     <script src="https://kit.fontawesome.com/3d1ed1057a.js" crossorigin="anonymous"></script>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Prosto+One&family=Roboto+Condensed:wght@300&display=swap"
         rel="stylesheet">
@@ -29,7 +32,6 @@
 <body>
     <canvas id="noise" class="noise"></canvas>
     <header>
-    
         <nav id="menu">
             <div id="envio">
                 <div>
@@ -130,7 +132,7 @@
             <ul class="menu">
 
                 <li><a href="shop.html" onclick="closeMenu()" class="menuItem">SHOP</a></li>
-                <li><a href="index.html" onclick="closeMenu()" class="menuItem">HOME</a></li>
+                <li><a href="cuenta.html" onclick="closeMenu()" class="menuItem">PROFILE</a></li>
                 <li><a href="about.html" onclick="closeMenu()" class="menuItem">ABOUT</a></li>
             
 
@@ -140,209 +142,85 @@
         </nav>
 
 
-
     </header>
-  
-    <section id="PERFIL">
-        <div id="perfilote" data-aos="zoom-in">
-            <div>
-                <img src="img/male-user.png">
-<h5>CÓDIGO PERSONAL: #9328-8201-2739</h5>
+    <section id="COL_1">
+        
+        <h1><a href="collection1_zapatilla.html"><</a> #003 <a href="collection1.html">></a></h1>
+        <div id="COL1_INFO">
+            <div class="animate__animated animate__zoomIn">
+                <h2>PERSONALIZACIÓN</h2>
+                <ul>
+                    <li>DUREZA</li>
+                    <li>COLOR</li>
+                    <li>ACABADOS</li>
+                    <li>MATERIAL</li>
+                    <li>HORNA</li>
+                    <li>TALLA
+                        <div class="popup-text">
+                            <p>Texto adicional para la composición.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div>
-                <form id="formDatos">
-
-
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="MIGUEL" />
-        
-                    <label for="apellidos">Apellidos:</label>
-                    <input type="text" id="apellidos" name="apellidos" placeholder="ALONSO FRUTOS" />
-        
-                    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-                    <input type="date" id="fechaNacimiento" value="2001-12-15" />
-        
-                    <label for="pais">Dirección:</label>
-                    <input type="text" id="pais" name="pais" placeholder="C/Alfonso XII, 42, Madrid, 28005" />
-                    <label for="email">E-mail:</label>
-                    <input type="text" id="email" name="email" placeholder="miguelalonso@gmail.com" />
-        
-                    <label for="telefono">Número de Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" placeholder="+34 658 393 233" />
-                    <label for="contraseña">Contraseña:</label>
-                    <input type="tel" id="contraseña" name="contraseña" placeholder="****************" />
-        
-                </form>
-
+            <div id="img_col">
+                <img src="img/DC57E50E-48BD-4524-985F-5B75E2B6B5F4.png" class="animate__animated animate__flipInY animate__slow" alt="">
             </div>
-        </div>
-        <div id="misiones" data-aos="zoom-in">
-            <h3>MISSIONS</h3>
-            <div>
-                <img src="img/20.png">
-                <div>
-                    <h4>Verificar E-mail</h4>
-                    <p>Confirma que el E-mail aportado es tuyo.</p>
-                </div>
-                <h1>></h1>
-            </div>
-            <div>
-                <img src="img/60.png">
-                <div>
-                    <h4>Recomendar a un amigx</h4>
-                    <p>Manda tu código exclusivo a alguien.</p>
-                </div>
-                <h1>></h1>
-            </div>
-            <div id="completed" style="background-color: #000 !important;">
-                <img src="img/TICK.png">
-                <div>
-                    <h4>COMPLETED</h4>
-                    <p>Regístrate y obtén puntos.</p>
-                </div>
-                <h1>+50%</h1>
+            <div class="animate__animated animate__zoomIn">
+                <h2>COLLECTOR MULE</h2>
+                <ul>
+                    <li>DESCRIPCIÓN 
+                        <div class="popup-text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nesciunt quia ullam hic fuga nobis atque. In laborum voluptatibus voluptatem libero eos. Voluptatibus accusantium quam fugit unde reiciendis! Harum, exercitationem.</p>
+                        </div>
+                    </li>
+                    <li>COMPOSICIÓN
+                        <div class="popup-text">
+                            <p>100% TPU 87A.</p>
+                        </div>
+                    </li>
+                    <li>MODELOS
+                        <div class="popup-text">
+                            <p>Haz click para cambiar entre modelo 3D y modelo físico.</p>
+                        </div>
+                    </li>
+                   
+        
                
+                </ul>
             </div>
-            <div id="completed" style="background-color: #000 !important;">
-                <img src="img/TICK.png">
-                <div>
-                    <h4>COMPLETED</h4>
-                    <p>Realiza tu primera compra.</p>
-                </div>
-                <h1>+35%</h1>
-               
-            </div>
-            
         </div>
-        <div id="inventario" data-aos="zoom-in">
-            <h3>INVENTORY</h3>
-            <div>
-                <div>
-                    <img src="img/3A8B6D37-BECA-4968-AC3F-F2A5592FA52A.png">
-                    <div>
-                        <h4>PRINCEDOM RUNNER</h4>
-                        <p>#-0f694</p>
-                    </div>
-                    
-                </div>
-                <div>
-                    <img src="img/DC57E50E-48BD-4524-985F-5B75E2B6B5F4.png">
-                    <div>
-                        <h4>COLLECTOR MULE</h4>
-                        <p>#-3e127</p>
-                    </div>
-                </div>
-                
-            </div>
-            
+        <div id="RA">
+            <a id="RA_Button" href="#">
+                <img src="img/augmented-reality.png" alt="Augmented Reality">
+            </a>
         </div>
-        <div id="wishlist" data-aos="zoom-in">
-            <h3>WISH-LIST</h3>
-            <div>
-                <div class="listfav">
-                    <div class="favart"  id="favart1">
-                        <img src="img/IMG_9593.png"  >
-                        <div class="art_1">
-                            <div class="art_2">
-    
-                                <a href="producto.html">
-                                    <h4>TIT</h4>
-                                    <h5>€59,95</h5>
-                                </a>
-                            </div>
-                            <p>Description</p>
-                            <div class="art_3">
-                                <button class="butCalc" onclick="restarCantidad('favart1')">-</button>
-                                <h2 id="canProducto1">1</h2>
-                                <button class="butCalc" onclick="sumarCantidad('favart1')">+</button>
-                                <i id="cerrar1" class="fa-regular fa-trash-can close-icon" onclick="cerrarFavart1()"></i>
-                            </div>
-                            <button type="button" class="btn btn-secondary" id="buttonWish" onclick="cerrarFavart1()">ADD TO CART</button>
-                        </div>
-                    </div>
-                    <div class="favart" id="favart1">
-                        <img src="img/337A086B-5A26-478F-830F-52B733FF1523.png" >
-                        <div class="art_1">
-                            <div class="art_2">
-                                <h4>TIT</h4>
-                                <h5>€43,95</h5>
-                            </div>
-                            <p>Description</p>
-                            <div class="art_3">
-                                <button class="butCalc" onclick="restarCantidad('favart4')">-</button>
-                                <h2 id="canProducto4">1</h2>
-                                <button class="butCalc" onclick="sumarCantidad('favart4')">+</button>
-                                <i id="cerrar4" class="fa-regular fa-trash-can close-icon" onclick="cerrarFavart4()"></i>
-                            </div>
-                            <button type="button" class="btn btn-secondary"id="buttonWish" onclick="cerrarFavart4()">ADD TO CART</button>
-                        </div>
-                    </div>
-                  
-                    <div class="favart" id="favart3">
-                        <img src="img/1B155C87-F951-4B85-AB12-0B1E8E311828.png"  >
-                        <div class="art_1">
-                            <div class="art_2">
-                                <h4>TIT</h4>
-                                <h5>€82,95</h5>
-                            </div>
-                            <p>Description</p>
-                            <div class="art_3">
-                                <button class="butCalc" onclick="restarCantidad('favart3')">-</button>
-                                <h2 id="canProducto3">1</h2>
-                                <button class="butCalc" onclick="sumarCantidad('favart3')">+</button>
-                                <i id="cerrar3" class="fa-regular fa-trash-can close-icon" onclick="cerrarFavart3()"></i>
-                            </div>
-                            <button type="button"class="btn btn-secondary" id="buttonWish"onclick="cerrarFavart3()">ADD TO CART</button>
-                        </div>
-                    </div>
-                    <div class="favart"  id="favart2">
-                        <img src="img/IMG_9586.png" style="transform: rotate(90deg)">
-                        <div class="art_1">
-                            <div class="art_2">
-                                <h4>TIT</h4>
-                                <h5>€47,95</h5>
-                            </div>
-                            <p>Description</p>
-                            <div class="art_3">
-                                <button class="butCalc" onclick="restarCantidad('favart2')">-</button>
-                                <h2 id="canProducto2">1</h2>
-                                <button class="butCalc" onclick="sumarCantidad('favart2')">+</button>
-                                <i id="cerrar2" class="fa-regular fa-trash-can close-icon" onclick="cerrarFavart2()"></i>
-                            </div>
-                            <button type="button" class="btn btn-secondary" id="buttonWish" onclick="cerrarFavart2()">ADD TO CART</button>
-                        </div>
-                    </div>
-                
-                </div>
-                
-            </div>
-            
-        </div>
-        <div id="rewards" data-aos="zoom-in">
-            <h3>REWARDS</h3>
-            <div>
+        <div id="popup_RA" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
                 <div>
-                    <img src="img/gift-card.png">
-                    <div>
-                        <h4>TARJETA REGALO 5€</h4>
-                        <p>Necesario: Nvl. 05</p>
-                    </div>
-                    <h1>REDEEM></h1>
+
+                    <h2>PERMITIR ABRIR CÁMARA</h2>
+                    <p>Experimenta nuestra colección de una manera innovadora. Con la función de Realidad Aumentada, podrás ver cómo te queda nuestra ropa en tiempo real usando la cámara de tu dispositivo.</p>
+                    <p>¿Cómo Funciona?</p>
+                    <p>
+                        <ul>
+                            <li>Permiso para la Cámara: Necesitamos acceder a tu cámara para mostrarte la ropa en tiempo real.</li>
+                        <li>Prueba Virtual: Selecciona las prendas y ajústalas sobre tu cuerpo para ver cómo te quedan.</li>
+                       <li>Explora y Disfruta: Cambia entre diferentes estilos y encuentra tu look perfecto desde casa.</li>
+                    </ul>
+                    </p>
+                    <p>Tu privacidad es importante para nosotros. Las imágenes de la cámara no se guardan ni se comparten. El acceso es solo para esta experiencia y se desactiva cuando cierras la función.</p>
+               <button id="permitButton">PERMITIR</button>
                 </div>
-                <div>
-                    <img src="img/gift-card.png">
-                    <div>
-                        <h4>TARJETA REGALO 15€</h4>
-                        <p>Necesario: Nvl. 10</p>
-                    </div>
-                    <h1>REDEEM></h1>
-                </div>
-                
             </div>
-            
         </div>
-  
+        <div id="BUY">
+            <button>ADD TO CART</button>
+           <button>BUY</button>
+        </div>
+        
     </section>
+
     <script>
         function openMenu() {
             document.getElementById("menu").lastElementChild.style.left = "0%";
@@ -406,7 +284,37 @@
                 canvas.height = window.innerHeight;
             }
         });
+        var popup = document.getElementById("popup_RA");
+        document.addEventListener('DOMContentLoaded', function() {
+    var popup = document.getElementById('popup_RA');
+    var raButton = document.getElementById('RA_Button');
+    var closeButton = document.querySelector('.popup .close');
+    var permitButton = document.getElementById('permitButton');
+
+    // Mostrar el popup al hacer clic en el enlace
+    raButton.addEventListener('click', function() {
+        popup.style.display = 'block';
+    });
+
+    // Cerrar el popup al hacer clic en la "x"
+    closeButton.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+
+    // Cerrar el popup al hacer clic en el botón "PERMITIR"
+    permitButton.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+
+    // Cerrar el popup si se hace clic fuera del contenido del popup
+    window.addEventListener('click', function(event) {
+        if (event.target == popup) {
+            popup.style.display = 'none';
+        }
+    });
+});
         AOS.init();
+        
     </script>
 </body>
 
