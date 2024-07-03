@@ -171,6 +171,7 @@ header {
     background-color: var(--colorSec) !important;
     padding: 0.5em;
     border: 2px solid var(--colorSec) !important;
+    cursor: url(../img/POINTER.png), pointer;
 }
 #perfil{
     display: flex;
@@ -415,6 +416,7 @@ display: flex;
     color: var(--colorClaro) !important;
      background-color: var(--colorSec) !important;
      border-radius: 0px;
+     cursor: url(../img/POINTER.png), pointer;
  }
 .dropdown-menu{
     background-color: var(--colorSec) !important;
@@ -428,6 +430,7 @@ display: flex;
 .dropdown-item:hover{
     border: 1px solid var(--colorClaro);
     border-radius: 0px;
+    cursor: url(../img/POINTER.png), pointer;
 
 }
 #compra {
@@ -1076,6 +1079,7 @@ section>p {
     background-color: var(--colorSec) !important;
     padding: 0.5em;
     border: 2px solid var(--colorSec) !important;
+    cursor: url(../img/POINTER.png), pointer;
 }
 #BUY{
     position: fixed;
@@ -1093,6 +1097,7 @@ section>p {
     color: var(--colorClaro);
     background-color: var(--colorSec) !important;
     border: 2px solid var(--colorSec) !important;
+    cursor: url(../img/POINTER.png), pointer;
 }
 /* ABOUT */
 #about>div{
@@ -1333,12 +1338,14 @@ margin-top: 0%;
         padding: 0.5em;
         color: var(--colorSec);
         border: 2px solid var(--colorSec) !important;
+        
     }
     #buttonWish:hover{
         color: var(--colorClaro);
         background-color: var(--colorSec) !important;
         padding: 0.5em;
         border: 2px solid var(--colorSec) !important;
+        cursor: url(../img/POINTER.png), pointer;
 
     }
     /*REWARDS*/
