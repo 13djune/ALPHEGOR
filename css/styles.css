@@ -25,9 +25,16 @@
     scroll-behavior: smooth;
     background-color: transparent !important;
     color: var(--colorSec);
+    cursor: url(../img/CURSOR.png), auto;
+   
+
 }
 
+html{
 
+    cursor: url(../img/CURSOR.png), auto;
+    min-height: 100%;
+}
 header {
     width: 100vw;
     position: sticky;
@@ -122,7 +129,7 @@ header {
     right: 5%;
     font-family: var(--tipoGeneral);
     color: var(--colorSec) !important;
-    cursor: pointer;
+    cursor: url(../img/POINTER.png), pointer;
     font-size: 2em;
 }
 #popUp > div > form > div {
@@ -145,7 +152,7 @@ header {
     left: 50%;
     top: 50%;
     transform: translate(-50%, 15%);
-    cursor: pointer;
+    cursor: url(../img/POINTER.png), pointer;
     border-radius: 0em;
     padding: 0.5em;
     border-width: 1px;
@@ -621,8 +628,7 @@ section>p {
     color: white;
 }
 #intro>div>a>p:hover{
-    font-family: 'EditorialNew-Italic' ;
-    cursor: pointer;
+    cursor: url(../img/POINTER.png), pointer;
 }
 #intro{
     display: flex;
@@ -673,7 +679,7 @@ section>p {
     border-radius: 50%;
     display: inline-block;
     margin: 1em;
-    cursor: pointer;
+    cursor: url(../img/POINTER.png), pointer;
     
   }
 
@@ -717,7 +723,7 @@ section>p {
     border-radius: 50%;
     display: inline-block;
     margin: 1em;
-    cursor: pointer;
+    cursor: not-allowed;
   }
 
  
@@ -762,7 +768,7 @@ section>p {
     border-radius: 50%;
     display: inline-block;
     margin: 1em;
-    cursor: pointer;
+    cursor: not-allowed;
   }
 
  
@@ -918,7 +924,7 @@ section>p {
  height: 60vh;
 }
 #COL_1>h1>a{
-   cursor: pointer;
+    cursor: url(../img/POINTER.png), pointer;
 }
 #img_col>img{
     width: 40vw;
@@ -960,7 +966,7 @@ section>p {
     border-bottom: 0px;
     padding: 0.5em;
     background-color: var(--colorPrim) !important;
-    cursor: pointer; 
+    cursor: url(../img/POINTER.png), pointer;
 }
 .popup-text {
     font-size: smaller;
@@ -1015,7 +1021,7 @@ section>p {
     bottom: 4em;
 }
 #RA>a {
-   cursor: pointer;
+    cursor: url(../img/POINTER.png), pointer;
 }
 #RA>a>img {
     width: 6vw;
@@ -1052,7 +1058,7 @@ section>p {
 .close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
+    cursor: url(../img/POINTER.png), pointer;
 }
 
 .popup-content>div {
@@ -1395,7 +1401,7 @@ margin-top: 0%;
        font-family: var(--tipoGeneral);
        margin: 0;
        padding: 1em;
-       cursor: pointer;
+       cursor: url(../img/POINTER.png), pointer;
    }
    #rewards>div>div>div>h4{
        margin-bottom: 5px;
@@ -1480,7 +1486,7 @@ margin-top: 0%;
      top: 5em;
      right: 1em;
      margin: 1em;
-     cursor: pointer;
+     cursor: url(../img/POINTER.png), pointer;
      z-index: 20;
  }
 .menu{
