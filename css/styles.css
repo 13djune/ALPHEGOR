@@ -207,6 +207,7 @@ color: var(--colorClaro);
     display: flex;
     flex-direction: row;
     align-items: center;
+    MARGIN: 0.5EM;
 }
 #perfilito>img {
     width: 8em;
@@ -302,9 +303,10 @@ color: var(--colorClaro);
     padding: 1em;
     width: 50%;
 }
-   #inventorito>div>div>img{
-      width: 4em;
-   }
+#inventorito>div>div>img {
+    width: 3em;
+    margin: 0.5em;
+}
    #inventorito>div>div>div>p{
        font-size: 0.7rem;
        color: var(--colorClaro);
@@ -1216,7 +1218,7 @@ margin-top: 0%;
     align-items: center;
 }
       #inventario>div>div>img{
-         width: 6em;
+         width: 15em;
       
 
       }

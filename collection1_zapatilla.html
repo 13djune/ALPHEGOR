@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/isotipo_neg.png" style="height: 100%; width: auto;">
+    <title>ALPHEGOR</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/3d1ed1057a.js" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Prosto+One&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <canvas id="noise" class="noise"></canvas>
+    <header>
+        <nav id="menu">
+            <div id="envio">
+                <div>
+                    <div id="perfil">
+
+                      
+                            <div><img src="img/male-user.png" alt="Perfil" id="perfil-img" onclick="toggleInfo()"> </div>
+                            <div><p>Nvl. 08</p></div>
+                        
+                        <div class="progreso-bar">
+                            
+                            <div class="progreso"></div>
+                
+                        </div>
+                        <div><p>75%</p></div>
+                    </div>
+                    <div id="compra">
+                        <img src="img/shopping-cart.png">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" style="background-color: white; color: black;">
+                                España (EUR €)
+                            </button>
+                            <ul class="dropdown-menu" style="border-radius: 0px;">
+                                <li><a class="dropdown-item" style="background-color: white; color: black;" href="#">EE.UU
+                                        (USD $)</a></li>
+                                <li><a class="dropdown-item" style="background-color: white; color: black;" href="#">Japan
+                                        (JPY ¥)</a></li>
+                                <li><a class="dropdown-item" style="background-color: white; color: black;" href="#">U.K
+                                        (GBP £)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="info_perfil" class="info_p">
+                        <div>
+                            <div id="perfilito">
+                                <img src="img/male-user.png">
+                                <div>
+
+                                    <h2>MIGUEL ALONSO FRUTOS</h2>
+                        
+                                    <p>Miembro desde 06/05/2024</p>
+                                    <p>miguelalonso@gmail.com</p>
+                                    <p>C/Alfonso XII, 42, Madrid, 28005</p>
+                                </div>
+                            </div>
+                            <div id="misionitas">
+                                <h3>MISSIONS</h3>
+                                <div>
+                                    <img src="img/20.png">
+                                    <div>
+                                        <h4>Verificar E-mail</h4>
+                                        <p>Confirma que el E-mail aportado es tuyo.</p>
+                                    </div>
+                                    <h1>></h1>
+                                </div>
+                                <div>
+                                    <img src="img/60.png">
+                                    <div>
+                                        <h4>Recomendar a un amigx</h4>
+                                        <p>Manda tu código exclusivo a alguien.</p>
+                                    </div>
+                                    <h1>></h1>
+                                </div>
+                                
+                            </div>
+                            <div id="inventorito">
+                                <h3>INVENTORY</h3>
+                                <div>
+                                    <div>
+                                        <img src="img/blockchain_w.png">
+                                        <div>
+                                            <h4>########</h4>
+                                            <p>ajsndcqw dq wdqhw dihqw dqwd qwdq dqwdhqw</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div>
+                                        <img src="img/blockchain_w.png">
+                                        <div>
+                                            <h4>########</h4>
+                                            <p>ajsndcqw dq wdqhw dihqw dqwd qwdq dqwdhqw</p>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div id="ver_mas">
+                                <a href="cuenta.html">IR AL PERFIL</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <ul class="menu">
+
+                <li><a href="shop.html" onclick="closeMenu()" class="menuItem">SHOP</a></li>
+                <li><a href="cuenta.html" onclick="closeMenu()" class="menuItem">PROFILE</a></li>
+                <li><a href="about.html" onclick="closeMenu()" class="menuItem">ABOUT</a></li>
+            
+
+            </ul>
+            <a href="javascript:void(0);" style="color: #000; background-color: transparent !important;" class="hamburguer" onclick="toggleMenu()">
+                                <i style="color: #000; background-color: transparent !important;" class="fa fa-bars"></i></a>
+        </nav>
+
+
+    </header>
+    <section id="COL_1">
+        
+        <h1>#001</h1>
+        <div id="COL1_INFO">
+            <div>
+                <h2>PERSONALIZACIÓN</h2>
+                <ul>
+                    <li>DUREZA</li>
+                    <li>COLOR</li>
+                    <li>ACABADOS</li>
+                    <li>MATERIAL</li>
+                    <li>HORNA</li>
+                    <li>TALLA
+                        <div class="popup-text">
+                            <p>Texto adicional para la composición.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="img_col">
+                <img src="img/6A34F61F-CE95-4186-A074-47EC36EDF6CB.png" class="animate__animated animate__flipInY animate__slow" alt="">
+            </div>
+            <div>
+                <h2>COLLECTOR TRACK JACKET</h2>
+                <ul>
+                    <li>DESCRIPCIÓN 
+                        <div class="popup-text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nesciunt quia ullam hic fuga nobis atque. In laborum voluptatibus voluptatem libero eos. Voluptatibus accusantium quam fugit unde reiciendis! Harum, exercitationem.</p>
+                        </div>
+                    </li>
+                    <li>COMPOSICIÓN
+                        <div class="popup-text">
+                            <p>Popelin 100% algodón. <br>Estampación.</p>
+                        </div>
+                    </li>
+                    <li>MODELOS
+                        <div class="popup-text">
+                            <p>Haz click para cambiar entre modelo 3D y modelo físico.</p>
+                        </div>
+                    </li>
+                   
+        
+               
+                </ul>
+            </div>
+        </div>
+        <div id="RA">
+            <a id="RA_Button" href="#">
+                <img src="img/augmented-reality.png" alt="Augmented Reality">
+            </a>
+        </div>
+        <div id="popup_RA" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <div>
+
+                    <h2>PERMITIR ABRIR CÁMARA</h2>
+                    <p>Experimenta nuestra colección de una manera innovadora. Con la función de Realidad Aumentada, podrás ver cómo te queda nuestra ropa en tiempo real usando la cámara de tu dispositivo.</p>
+                    <p>¿Cómo Funciona?</p>
+                    <p>
+                        <ul>
+                            <li>Permiso para la Cámara: Necesitamos acceder a tu cámara para mostrarte la ropa en tiempo real.</li>
+                        <li>Prueba Virtual: Selecciona las prendas y ajústalas sobre tu cuerpo para ver cómo te quedan.</li>
+                       <li>Explora y Disfruta: Cambia entre diferentes estilos y encuentra tu look perfecto desde casa.</li>
+                    </ul>
+                    </p>
+                    <p>Tu privacidad es importante para nosotros. Las imágenes de la cámara no se guardan ni se comparten. El acceso es solo para esta experiencia y se desactiva cuando cierras la función.</p>
+               <button id="permitButton">PERMITIR</button>
+                </div>
+            </div>
+        </div>
+        <div id="BUY">
+            <button>ADD TO CART</button>
+           <button>BUY</button>
+        </div>
+        
+    </section>
+
+    <script>
+        function openMenu() {
+            document.getElementById("menu").lastElementChild.style.left = "0%";
+        }
+
+        function closeMenu() {
+            document.getElementById("menu").lastElementChild.style.left = "-110%";
+        }
+
+        function menu() {
+            "use strict";
+            if (document.getElementById("menu").lastElementChild.style.left === "0%") {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('show-menu');
+        }
+
+        function closeMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.remove('show-menu');
+        }
+
+        function generateNoise() {
+            const canvas = document.getElementById('noise');
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width = window.innerWidth;
+            const height = canvas.height = window.innerHeight;
+            const imageData = ctx.createImageData(width, height);
+            const buffer32 = new Uint32Array(imageData.data.buffer);
+            const len = buffer32.length;
+
+            for (let i = 0; i < len; i++) {
+                buffer32[i] = ((255 * Math.random()) | 0) << 24;
+            }
+
+            ctx.putImageData(imageData, 0, 0);
+        }
+
+        function updateNoise() {
+            const canvas = document.getElementById('noise');
+            if (canvas) {
+                generateNoise();
+                requestAnimationFrame(updateNoise);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateNoise();
+        });
+
+        window.addEventListener('resize', () => {
+            const canvas = document.getElementById('noise');
+            if (canvas) {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+        });
+        var popup = document.getElementById("popup_RA");
+        document.addEventListener('DOMContentLoaded', function() {
+    var popup = document.getElementById('popup_RA');
+    var raButton = document.getElementById('RA_Button');
+    var closeButton = document.querySelector('.popup .close');
+    var permitButton = document.getElementById('permitButton');
+
+    // Mostrar el popup al hacer clic en el enlace
+    raButton.addEventListener('click', function() {
+        popup.style.display = 'block';
+    });
+
+    // Cerrar el popup al hacer clic en la "x"
+    closeButton.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+
+    // Cerrar el popup al hacer clic en el botón "PERMITIR"
+    permitButton.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+
+    // Cerrar el popup si se hace clic fuera del contenido del popup
+    window.addEventListener('click', function(event) {
+        if (event.target == popup) {
+            popup.style.display = 'none';
+        }
+    });
+});
+        AOS.init();
+        
+    </script>
+</body>
+
+</html>
