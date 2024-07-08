@@ -498,7 +498,7 @@ display: flex;
 }
 .menu_shop>li>a {
     color: var(--colorClaro) !important;
-    
+    cursor: url(../img/POINTER.png), pointer;
 }
 
 .menu {
@@ -528,6 +528,7 @@ display: flex;
     font-size: 1em;
     background-color: transparent;
     transform: rotate(-90deg);
+    cursor: url(../img/POINTER.png), pointer;
 }
 
 a {
@@ -537,9 +538,11 @@ a {
 }
 .menu>li:hover {
     scale: 120%;
+    cursor: url(../img/POINTER.png), pointer;
 }
 .menu>li>a>i:hover {
     scale: 120%;
+    cursor: url(../img/POINTER.png), pointer;
 }
 
 .hamburguer{
@@ -574,12 +577,14 @@ a {
     font-size: 1em;
     background-color: transparent;
     position: relative; /* Necesario para posicionar la info */
+    cursor: url(../img/POINTER.png), pointer;
 }
 .menu_about>li>a {
     color: var(--colorSec) !important;
 }
 .menu_about>li:hover {
     scale: 120%;
+
 }
 
 .info {
@@ -593,10 +598,12 @@ a {
     padding: 5px;
     white-space: nowrap;
     z-index: 20;
+    cursor: url(../img/POINTER.png), pointer;
 }
 
 .menu_about>li:hover .info {
     display: block;
+
 }
 /* SECTIONS */
 section {
